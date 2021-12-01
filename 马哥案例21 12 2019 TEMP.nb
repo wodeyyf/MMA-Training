@@ -1,0 +1,1183 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     49833,       1175]
+NotebookOptionsPosition[     48358,       1144]
+NotebookOutlinePosition[     48733,       1160]
+CellTagsIndexPosition[     48690,       1157]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Clear", "[", "myCircleFunction", "]"}]], "Input",
+ CellChangeTimes->{{3.783325161761546*^9, 3.783325169253432*^9}},
+ CellLabel->
+  "In[1322]:=",ExpressionUUID->"df8c683e-46ab-4587-b52f-f77bf00e81b9"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"myCircleFunction", "[", 
+   RowBox[{"x_", "/;", 
+    RowBox[{"EvenQ", "[", "x", "]"}]}], "]"}], ":=", 
+  RowBox[{"{", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"myCircleFunction", "[", 
+   RowBox[{"x_", "/;", 
+    RowBox[{"OddQ", "[", "x", "]"}]}], "]"}], ":=", 
+  RowBox[{"{", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], "}"}]}]}], "Input",
+ CellChangeTimes->{{3.7833250859839306`*^9, 3.7833251998625984`*^9}, 
+   3.783328434702837*^9, 3.7833288516697445`*^9, 3.7833288860947638`*^9, {
+   3.783328958266409*^9, 3.783328971219468*^9}, 3.78332902606931*^9, {
+   3.783329086163578*^9, 3.78332908811806*^9}, {3.783593290732226*^9, 
+   3.7835932981192517`*^9}},
+ CellLabel->
+  "In[1323]:=",ExpressionUUID->"ee657304-fdef-4766-8cd5-fe1ebd09f43c"],
+
+Cell[BoxData[
+ RowBox[{"xyzCoordinates", ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"RandomReal", "[", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "30"}], "}"}], "]"}], ",", 
+    RowBox[{"RandomReal", "[", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "30"}], "}"}], "]"}], ",", 
+    RowBox[{"RandomReal", "[", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "30"}], "}"}], "]"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.783327716277026*^9, 3.783327723054001*^9}, {
+  3.7833278011927304`*^9, 3.7833278212899942`*^9}, {3.783328780246603*^9, 
+  3.783328780630581*^9}, {3.783328811102601*^9, 3.7833288112601786`*^9}},
+ CellLabel->
+  "In[1325]:=",ExpressionUUID->"d2007add-19a5-4b77-8311-73c2386d61b5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"myTable", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"myCircleFunction", "[", 
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}], "]"}], "]"}], ",", "100"}], 
+   "]"}]}]], "Input",
+ CellLabel->
+  "In[1326]:=",ExpressionUUID->"42267f7c-16cd-4470-a056-e6ec1782a509"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[CircleBox[{0, 0}],
+     ImageSize->{24., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}], ",", 
+   RowBox[{"{", 
+    GraphicsBox[
+     {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+     ImageSize->{30., Automatic}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.7833276078376503`*^9, 3.783327627567711*^9}, 
+   3.7833276654272943`*^9, {3.783327841470613*^9, 3.7833278677096367`*^9}, 
+   3.7833284377494044`*^9, 3.7833285443146296`*^9, 3.783328782507188*^9, 
+   3.783328818565143*^9, {3.7833289734353848`*^9, 3.783328990960395*^9}, 
+   3.7833290397294426`*^9, {3.783329091095679*^9, 3.7833290993521657`*^9}, 
+   3.7835933311661158`*^9},
+ CellLabel->
+  "Out[1326]=",ExpressionUUID->"5bcc8da0-90d6-4723-a21b-0aa26d7b6f4a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"myTable", "=", 
+  RowBox[{"Flatten", "[", "myTable", "]"}]}]], "Input",
+ CellChangeTimes->{{3.783325731025367*^9, 3.783325736171709*^9}},
+ CellLabel->
+  "In[1327]:=",ExpressionUUID->"a3851dcb-413e-4066-8677-aa88c1f9279e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[CircleBox[{0, 0}],
+    ImageSize->{24., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}], ",", 
+   GraphicsBox[
+    {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+    ImageSize->{30., Automatic}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7833257378668127`*^9, {3.783327608240451*^9, 3.7833276277651815`*^9}, 
+   3.7833276663268924`*^9, {3.783327841628006*^9, 3.783327868053316*^9}, 
+   3.7833284381614795`*^9, 3.783328544675657*^9, 3.7833287828522654`*^9, 
+   3.7833288189922957`*^9, {3.783328973518201*^9, 3.7833289910140467`*^9}, 
+   3.783329039827182*^9, {3.7833290911803226`*^9, 3.7833290994146533`*^9}, 
+   3.7835933313586035`*^9},
+ CellLabel->
+  "Out[1327]=",ExpressionUUID->"8591570f-2cf5-4d9b-b929-825c632b5446"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"myTableOfSpheres", "=", 
+   RowBox[{"myTable", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       GraphicsBox[
+        {GrayLevel[1], EdgeForm[RGBColor[1, 0, 0]], DiskBox[{0, 0}]},
+        ImageSize->{30., Automatic}], "\[RuleDelayed]", 
+       RowBox[{"Sphere", "[", 
+        RowBox[{"xyzCoordinates", ",", "0.5"}], "]"}]}], ",", 
+      RowBox[{
+       GraphicsBox[CircleBox[{0, 0}],
+        ImageSize->{24., Automatic}], "\[RuleDelayed]", 
+       RowBox[{"Sphere", "[", 
+        RowBox[{"xyzCoordinates", ",", "0.25"}], "]"}]}]}], " ", "}"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.783325738724554*^9, 3.7833257921659126`*^9}, {
+   3.7833263925206003`*^9, 3.7833264504491405`*^9}, 3.78332763104628*^9, 
+   3.7833276990398655`*^9, 3.7833278387229953`*^9, {3.783328541013298*^9, 
+   3.783328541673851*^9}, {3.783328599727044*^9, 3.78332866742322*^9}, {
+   3.78332897993791*^9, 3.7833289892727942`*^9}, 3.7833290382962728`*^9, {
+   3.7833290947091503`*^9, 3.7833290976752973`*^9}, {3.7835933147376747`*^9, 
+   3.7835933295807924`*^9}},
+ CellLabel->
+  "In[1328]:=",ExpressionUUID->"66042ba2-fc7a-47bb-a7f9-4c6dca55a259"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"myTableOfSpheresNext", "=", 
+   RowBox[{"myTableOfSpheres", "/.", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Sphere", "[", 
+       RowBox[{"a_", ",", "b_"}], "]"}], ")"}], "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b"}], "}"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.78332768893902*^9, 3.7833276892956643`*^9}, {
+  3.7833278491887884`*^9, 3.7833278494251957`*^9}},
+ CellLabel->
+  "In[1329]:=",ExpressionUUID->"df810fc5-9c79-457c-b725-86492318538f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"testTest", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Line", "[", "#", "]"}], "&"}], "/@", 
+     RowBox[{"Partition", "[", 
+      RowBox[{"myTableOfSpheresNext", ",", "2"}], "]"}]}], "/.", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Line", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"a_", ",", "th1_"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"b_", ",", "th2_"}], "}"}]}], "}"}], "]"}], ")"}], 
+     "\[RuleDelayed]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Thickness", "[", 
+        RowBox[{"th1", "/", "60"}], "]"}], ",", 
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{"a", ",", "b"}], "}"}], "]"}]}], "}"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{3.7833274947548494`*^9, 3.783327621133542*^9},
+ CellLabel->
+  "In[1330]:=",ExpressionUUID->"8a06704a-0d45-449a-b1b3-e4b57a236890"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"Graphics3D", "[", 
+   RowBox[{"{", 
+    RowBox[{"myTableOfSpheres", ",", "testTest"}], "}"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.783327325633027*^9},
+ CellLabel->
+  "In[1331]:=",ExpressionUUID->"f00c9033-a81c-4c2d-99dc-3c5adee31139"],
+
+Cell[BoxData[
+ Graphics3DBox[{{
+    SphereBox[{4.52747132776404, 13.213547858797696`, 23.073085999618804`}, 
+     0.25], SphereBox[{12.100744064536983`, 19.215489948006322`, 
+     2.1125011109986964`}, 0.25], 
+    SphereBox[{17.997909240850916`, 11.640421422490412`, 15.548172494562927`},
+      0.25], SphereBox[{12.16064832099719, 14.08147628856166, 
+     12.383763181676919`}, 0.25], 
+    SphereBox[{28.16098691294127, 25.405799215494646`, 28.402867421750358`}, 
+     0.25], SphereBox[{26.64008399989212, 25.522554236690233`, 
+     17.446661011318703`}, 0.25], 
+    SphereBox[{15.669619718798721`, 19.01506321217682, 6.241547614256511}, 
+     0.25], SphereBox[{15.127223446852582`, 28.189975815522587`, 
+     6.4868271613847455`}, 0.5], 
+    SphereBox[{23.71135367657981, 29.99068708107307, 17.42439686299553}, 0.5],
+     SphereBox[{24.93902521880956, 6.096839924803255, 24.23497629656692}, 
+     0.25], SphereBox[{29.485321672731892`, 8.533824639895876, 
+     11.837950421655876`}, 0.5], 
+    SphereBox[{4.575028015554338, 17.10391857120112, 11.059862113007895`}, 
+     0.25], SphereBox[{4.297895591836195, 5.330940814895428, 
+     15.653301466468818`}, 0.25], 
+    SphereBox[{6.68309660398554, 4.78934491061154, 20.978930538960206`}, 
+     0.25], SphereBox[{2.8211612366494023`, 13.18969494613696, 
+     28.54940050162257}, 0.5], 
+    SphereBox[{12.588932448924318`, 8.146639693429975, 2.8534427923467334`}, 
+     0.25], SphereBox[{17.355466267993698`, 16.56205088669529, 
+     28.722355092876}, 0.5], 
+    SphereBox[{20.941126522021456`, 5.328297477313235, 2.6627157817666998`}, 
+     0.5], SphereBox[{29.14981154407107, 1.1664719975439226`, 
+     11.435682695522331`}, 0.25], 
+    SphereBox[{12.842686485576337`, 8.201572979823439, 16.33809983893135}, 
+     0.25], SphereBox[{24.092710334556756`, 18.64349883066886, 
+     28.57396123954188}, 0.25], 
+    SphereBox[{5.959810062630339, 23.314810499056208`, 5.234902350591625}, 
+     0.5], SphereBox[{5.954434780071402, 7.841426008956525, 
+     24.27252609942972}, 0.5], 
+    SphereBox[{24.29917444801852, 7.3635231271459105`, 9.117817218814409}, 
+     0.25], 
+    SphereBox[{9.846050764218305, 4.784593642980802, 19.76411114518244}, 0.5],
+     SphereBox[{10.29670410737151, 9.516067860311331, 1.2126078177769628`}, 
+     0.25], SphereBox[{22.19517178246317, 14.39264555657568, 
+     27.78957508567494}, 0.5], 
+    SphereBox[{25.160117452218707`, 28.90915898788488, 10.788107755963345`}, 
+     0.5], SphereBox[{13.765968840245371`, 1.0455218006989284`, 
+     17.83959801264443}, 0.5], 
+    SphereBox[{11.771385263828762`, 16.532418022767004`, 21.377975953907473`},
+      0.25], SphereBox[{23.85572948206392, 9.018681455958344, 
+     25.390708193334454`}, 0.5], 
+    SphereBox[{15.433442208893617`, 15.642167148828207`, 23.119714585306383`},
+      0.5], SphereBox[{1.3223517792035082`, 29.42908279890794, 
+     17.813409961590196`}, 0.25], 
+    SphereBox[{15.54962018788629, 12.563817452498377`, 18.47568591588429}, 
+     0.5], SphereBox[{26.780002958683795`, 29.678652265423906`, 
+     21.773067138410006`}, 0.5], 
+    SphereBox[{4.562479677396759, 7.9319469356562, 22.692887307628702`}, 
+     0.25], SphereBox[{9.364310696550042, 10.848388732912554`, 
+     28.612585524851823`}, 0.25], 
+    SphereBox[{13.285371800437481`, 1.0567140147665235`, 17.778889060262344`},
+      0.25], SphereBox[{19.4119639410181, 24.560819290857225`, 
+     29.497428199866675`}, 0.5], 
+    SphereBox[{25.418028918904767`, 15.238780195922423`, 22.375659967026365`},
+      0.25], SphereBox[{26.512670201336988`, 24.165665651406513`, 
+     8.039731791358456}, 0.25], 
+    SphereBox[{2.577002903736755, 9.890231042329361, 25.785424735821167`}, 
+     0.25], SphereBox[{27.199598557891193`, 29.189281336860674`, 
+     9.26935806845222}, 0.5], 
+    SphereBox[{2.815083524953831, 28.929935812014435`, 8.766450731935016}, 
+     0.5], SphereBox[{26.603322894954267`, 11.64234757579397, 
+     26.039962972990516`}, 0.5], 
+    SphereBox[{4.1010361529939985`, 7.144421723347243, 10.406451937683123`}, 
+     0.25], SphereBox[{9.797295832158099, 20.642113738849105`, 
+     3.790045472868492}, 0.5], 
+    SphereBox[{29.620852388030173`, 4.20865562413487, 24.273945287269036`}, 
+     0.25], 
+    SphereBox[{11.198007065059755`, 27.537900525953425`, 7.859326161137709}, 
+     0.25], SphereBox[{7.381572039067748, 10.54128884054154, 
+     26.88078477133805}, 0.25], 
+    SphereBox[{14.206652335486844`, 16.059824012406807`, 15.864869250927242`},
+      0.5], SphereBox[{24.38882684619152, 7.556807309852459, 
+     13.078603184988623`}, 0.5], 
+    SphereBox[{3.848538359512851, 24.94215389542697, 14.177420957897574`}, 
+     0.5], SphereBox[{20.779890166190548`, 1.7830935210609056`, 
+     16.346284661564283`}, 0.5], 
+    SphereBox[{13.067875007885192`, 5.741105661065895, 12.645023966210047`}, 
+     0.25], SphereBox[{10.648424459544195`, 11.317226955470801`, 
+     24.71340130591407}, 0.25], 
+    SphereBox[{21.65575697878075, 8.16937705236829, 11.310797033592436`}, 
+     0.5], SphereBox[{18.48558369570908, 10.453563565446586`, 
+     27.00497005234228}, 0.25], 
+    SphereBox[{26.49156459180025, 1.0264105786011122`, 21.443722640507055`}, 
+     0.5], SphereBox[{25.08400005026983, 20.445010176218148`, 
+     9.424249288140693}, 0.25], 
+    SphereBox[{7.619506295282783, 13.999774364377586`, 19.40117518412022}, 
+     0.5], SphereBox[{2.772045055503895, 7.382511577417496, 
+     3.8668005758120216`}, 0.5], 
+    SphereBox[{24.837832992787824`, 7.299002233447915, 2.3960825016529768`}, 
+     0.5], SphereBox[{5.192311882855066, 13.558542410021204`, 
+     17.0659997735209}, 0.5], 
+    SphereBox[{7.064298802339586, 16.01075071194029, 14.492333352900978`}, 
+     0.25], SphereBox[{16.63431670934134, 7.611466013893391, 
+     13.901453953288716`}, 0.25], 
+    SphereBox[{26.94147940329438, 13.242441021060998`, 21.473935647465368`}, 
+     0.5], SphereBox[{22.4756311090934, 15.343407449579082`, 
+     12.44766110533967}, 0.5], 
+    SphereBox[{9.520332396415078, 4.503716231349188, 21.61600813641647}, 0.5],
+     SphereBox[{2.4252256667883536`, 9.804671305890324, 26.94178776084462}, 
+     0.25], SphereBox[{13.018949149062543`, 17.312783696798462`, 
+     20.737980569573587`}, 0.25], 
+    SphereBox[{26.734552480853118`, 18.12398665740389, 20.911225855517486`}, 
+     0.25], 
+    SphereBox[{13.320185968929415`, 27.355423097387046`, 4.75204849134645}, 
+     0.25], SphereBox[{18.808152814623305`, 19.23001683543336, 
+     5.841183315890653}, 0.5], 
+    SphereBox[{11.547163558253281`, 22.583115940491496`, 5.703010390055553}, 
+     0.5], SphereBox[{22.62422488771869, 4.444148042709109, 
+     12.894090985058924`}, 0.25], 
+    SphereBox[{9.81946775794033, 7.567314596246838, 15.909174453465795`}, 
+     0.5], SphereBox[{23.923505602744875`, 14.647606499504533`, 
+     9.303994794412006}, 0.5], 
+    SphereBox[{7.847301503430813, 14.868843944787237`, 25.039499816745312`}, 
+     0.25], SphereBox[{21.981821924469266`, 10.997375451288178`, 
+     29.832088380767374`}, 0.25], 
+    SphereBox[{18.33393789549926, 2.3128826878136763`, 20.52544718475552}, 
+     0.25], SphereBox[{11.881477159915313`, 3.544453080480441, 
+     20.741722291633337`}, 0.25], 
+    SphereBox[{18.213714072802475`, 14.882333275272245`, 9.512827362602074}, 
+     0.25], SphereBox[{6.847011221142608, 24.008348470974695`, 
+     11.524324272981787`}, 0.5], 
+    SphereBox[{7.712131697846132, 5.609946642406648, 8.709395685507879}, 0.5],
+     SphereBox[{27.274645520746212`, 4.101637523654254, 14.953994020173404`}, 
+     0.25], SphereBox[{20.75549972818427, 17.94560828159004, 
+     2.9229004530331757`}, 0.5], 
+    SphereBox[{5.126106326041281, 18.013768711782248`, 8.342353247326827}, 
+     0.5], SphereBox[{18.114195573977234`, 23.36570405353295, 
+     1.782656504191607}, 0.25], 
+    SphereBox[{6.941033118303132, 4.8027222193585075`, 29.621508616285205`}, 
+     0.25], SphereBox[{28.69901446059962, 21.832977112871056`, 
+     4.905760117748393}, 0.25], 
+    SphereBox[{11.407142097203412`, 19.01715045719076, 10.907943596272858`}, 
+     0.25], SphereBox[{24.067523388985897`, 14.853514309190672`, 
+     17.259462695529194`}, 0.25], 
+    SphereBox[{25.034729044476308`, 3.404557122684352, 15.800681304799113`}, 
+     0.25], SphereBox[{21.281342351118596`, 25.292144075052235`, 
+     28.727343805431133`}, 0.5], 
+    SphereBox[{16.843097391679535`, 5.813750931743421, 15.262456384756}, 0.5],
+     SphereBox[{17.910547243831303`, 6.294934360008398, 3.0131491833491353`}, 
+     0.25], SphereBox[{6.077389369456185, 17.512108408844327`, 
+     12.90806146019925}, 0.5], 
+    SphereBox[{18.480018955997323`, 21.596160224297783`, 9.88307369986942}, 
+     0.5], SphereBox[{20.18104548972545, 25.660363125098748`, 
+     8.166519719993161}, 0.5]}, {
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{4.52747132776404, 13.213547858797696`, 
+      23.073085999618804`}, {12.100744064536983`, 19.215489948006322`, 
+      2.1125011109986964`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{17.997909240850916`, 11.640421422490412`, 
+      15.548172494562927`}, {12.16064832099719, 14.08147628856166, 
+      12.383763181676919`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{28.16098691294127, 25.405799215494646`, 
+      28.402867421750358`}, {26.64008399989212, 25.522554236690233`, 
+      17.446661011318703`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{15.669619718798721`, 19.01506321217682, 6.241547614256511}, {
+      15.127223446852582`, 28.189975815522587`, 6.4868271613847455`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{23.71135367657981, 29.99068708107307, 17.42439686299553}, {
+      24.93902521880956, 6.096839924803255, 24.23497629656692}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{29.485321672731892`, 8.533824639895876, 
+      11.837950421655876`}, {4.575028015554338, 17.10391857120112, 
+      11.059862113007895`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{4.297895591836195, 5.330940814895428, 15.653301466468818`}, {
+      6.68309660398554, 4.78934491061154, 20.978930538960206`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{2.8211612366494023`, 13.18969494613696, 28.54940050162257}, {
+      12.588932448924318`, 8.146639693429975, 2.8534427923467334`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{17.355466267993698`, 16.56205088669529, 28.722355092876}, {
+      20.941126522021456`, 5.328297477313235, 2.6627157817666998`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{29.14981154407107, 1.1664719975439226`, 
+      11.435682695522331`}, {12.842686485576337`, 8.201572979823439, 
+      16.33809983893135}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{24.092710334556756`, 18.64349883066886, 28.57396123954188}, {
+      5.959810062630339, 23.314810499056208`, 5.234902350591625}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{5.954434780071402, 7.841426008956525, 24.27252609942972}, {
+      24.29917444801852, 7.3635231271459105`, 9.117817218814409}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{9.846050764218305, 4.784593642980802, 19.76411114518244}, {
+      10.29670410737151, 9.516067860311331, 1.2126078177769628`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{22.19517178246317, 14.39264555657568, 27.78957508567494}, {
+      25.160117452218707`, 28.90915898788488, 10.788107755963345`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{13.765968840245371`, 1.0455218006989284`, 
+      17.83959801264443}, {11.771385263828762`, 16.532418022767004`, 
+      21.377975953907473`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{23.85572948206392, 9.018681455958344, 25.390708193334454`}, {
+      15.433442208893617`, 15.642167148828207`, 23.119714585306383`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{1.3223517792035082`, 29.42908279890794, 
+      17.813409961590196`}, {15.54962018788629, 12.563817452498377`, 
+      18.47568591588429}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{26.780002958683795`, 29.678652265423906`, 
+      21.773067138410006`}, {4.562479677396759, 7.9319469356562, 
+      22.692887307628702`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{9.364310696550042, 10.848388732912554`, 
+      28.612585524851823`}, {13.285371800437481`, 1.0567140147665235`, 
+      17.778889060262344`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{19.4119639410181, 24.560819290857225`, 
+      29.497428199866675`}, {25.418028918904767`, 15.238780195922423`, 
+      22.375659967026365`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{26.512670201336988`, 24.165665651406513`, 
+      8.039731791358456}, {2.577002903736755, 9.890231042329361, 
+      25.785424735821167`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{27.199598557891193`, 29.189281336860674`, 
+      9.26935806845222}, {2.815083524953831, 28.929935812014435`, 
+      8.766450731935016}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{26.603322894954267`, 11.64234757579397, 
+      26.039962972990516`}, {4.1010361529939985`, 7.144421723347243, 
+      10.406451937683123`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{9.797295832158099, 20.642113738849105`, 3.790045472868492}, {
+      29.620852388030173`, 4.20865562413487, 24.273945287269036`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{11.198007065059755`, 27.537900525953425`, 
+      7.859326161137709}, {7.381572039067748, 10.54128884054154, 
+      26.88078477133805}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{14.206652335486844`, 16.059824012406807`, 
+      15.864869250927242`}, {24.38882684619152, 7.556807309852459, 
+      13.078603184988623`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{3.848538359512851, 24.94215389542697, 14.177420957897574`}, {
+      20.779890166190548`, 1.7830935210609056`, 16.346284661564283`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{13.067875007885192`, 5.741105661065895, 
+      12.645023966210047`}, {10.648424459544195`, 11.317226955470801`, 
+      24.71340130591407}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{21.65575697878075, 8.16937705236829, 11.310797033592436`}, {
+      18.48558369570908, 10.453563565446586`, 27.00497005234228}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{26.49156459180025, 1.0264105786011122`, 
+      21.443722640507055`}, {25.08400005026983, 20.445010176218148`, 
+      9.424249288140693}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{7.619506295282783, 13.999774364377586`, 19.40117518412022}, {
+      2.772045055503895, 7.382511577417496, 3.8668005758120216`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{24.837832992787824`, 7.299002233447915, 
+      2.3960825016529768`}, {5.192311882855066, 13.558542410021204`, 
+      17.0659997735209}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{7.064298802339586, 16.01075071194029, 14.492333352900978`}, {
+      16.63431670934134, 7.611466013893391, 13.901453953288716`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{26.94147940329438, 13.242441021060998`, 
+      21.473935647465368`}, {22.4756311090934, 15.343407449579082`, 
+      12.44766110533967}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{9.520332396415078, 4.503716231349188, 21.61600813641647}, {
+      2.4252256667883536`, 9.804671305890324, 26.94178776084462}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{13.018949149062543`, 17.312783696798462`, 
+      20.737980569573587`}, {26.734552480853118`, 18.12398665740389, 
+      20.911225855517486`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{13.320185968929415`, 27.355423097387046`, 
+      4.75204849134645}, {18.808152814623305`, 19.23001683543336, 
+      5.841183315890653}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{11.547163558253281`, 22.583115940491496`, 
+      5.703010390055553}, {22.62422488771869, 4.444148042709109, 
+      12.894090985058924`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{9.81946775794033, 7.567314596246838, 15.909174453465795`}, {
+      23.923505602744875`, 14.647606499504533`, 9.303994794412006}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{7.847301503430813, 14.868843944787237`, 
+      25.039499816745312`}, {21.981821924469266`, 10.997375451288178`, 
+      29.832088380767374`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{18.33393789549926, 2.3128826878136763`, 20.52544718475552}, {
+      11.881477159915313`, 3.544453080480441, 20.741722291633337`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{18.213714072802475`, 14.882333275272245`, 
+      9.512827362602074}, {6.847011221142608, 24.008348470974695`, 
+      11.524324272981787`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{7.712131697846132, 5.609946642406648, 8.709395685507879}, {
+      27.274645520746212`, 4.101637523654254, 14.953994020173404`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{20.75549972818427, 17.94560828159004, 2.9229004530331757`}, {
+      5.126106326041281, 18.013768711782248`, 8.342353247326827}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{18.114195573977234`, 23.36570405353295, 1.782656504191607}, {
+      6.941033118303132, 4.8027222193585075`, 29.621508616285205`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{28.69901446059962, 21.832977112871056`, 4.905760117748393}, {
+      11.407142097203412`, 19.01715045719076, 10.907943596272858`}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{24.067523388985897`, 14.853514309190672`, 
+      17.259462695529194`}, {25.034729044476308`, 3.404557122684352, 
+      15.800681304799113`}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{21.281342351118596`, 25.292144075052235`, 
+      28.727343805431133`}, {16.843097391679535`, 5.813750931743421, 
+      15.262456384756}}]}, 
+    {Thickness[0.004166666666666667], 
+     Line3DBox[{{17.910547243831303`, 6.294934360008398, 
+      3.0131491833491353`}, {6.077389369456185, 17.512108408844327`, 
+      12.90806146019925}}]}, 
+    {Thickness[0.008333333333333333], 
+     Line3DBox[{{18.480018955997323`, 21.596160224297783`, 
+      9.88307369986942}, {20.18104548972545, 25.660363125098748`, 
+      8.166519719993161}}]}}},
+  ImageSize->{369.49312872754683`, 343.5},
+  ViewPoint->{-0.21103123384721043`, -2.6496254467708087`, \
+-2.0940274139001898`},
+  ViewVertical->{-0.17151638539249692`, -0.9305189614884927, 
+   0.32359943116802564`}]], "Output",
+ CellChangeTimes->{{3.783327327176894*^9, 3.7833273723701086`*^9}, 
+   3.783327433249408*^9, {3.7833276092048736`*^9, 3.7833276283806076`*^9}, 
+   3.783327667300284*^9, {3.7833278422511325`*^9, 3.783327868479952*^9}, 
+   3.7833284386760645`*^9, 3.7833285453304067`*^9, {3.783328613818547*^9, 
+   3.7833286263614297`*^9}, 3.783328677142611*^9, 3.783328783279952*^9, 
+   3.7833288194131737`*^9, {3.783328973774477*^9, 3.7833289912820024`*^9}, 
+   3.783329040187107*^9, {3.783329091396494*^9, 3.783329099682375*^9}, 
+   3.7835933321592255`*^9},
+ CellLabel->
+  "Out[1331]=",ExpressionUUID->"b54bbac4-e953-403a-b22c-ade0969ad6f6"]
+}, Open  ]]
+},
+WindowSize->{1521, 857},
+WindowMargins->{{Automatic, 477}, {Automatic, 240}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 223, 4, 43, "Input",ExpressionUUID->"df8c683e-46ab-4587-b52f-f77bf00e81b9"],
+Cell[784, 26, 930, 22, 114, "Input",ExpressionUUID->"ee657304-fdef-4766-8cd5-fe1ebd09f43c"],
+Cell[1717, 50, 699, 17, 43, "Input",ExpressionUUID->"d2007add-19a5-4b77-8311-73c2386d61b5"],
+Cell[CellGroupData[{
+Cell[2441, 71, 344, 10, 43, "Input",ExpressionUUID->"42267f7c-16cd-4470-a056-e6ec1782a509"],
+Cell[2788, 83, 12836, 357, 434, "Output",ExpressionUUID->"5bcc8da0-90d6-4723-a21b-0aa26d7b6f4a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15661, 445, 245, 5, 43, "Input",ExpressionUUID->"a3851dcb-413e-4066-8677-aa88c1f9279e"],
+Cell[15909, 452, 10216, 258, 320, "Output",ExpressionUUID->"8591570f-2cf5-4d9b-b929-825c632b5446"]
+}, Open  ]],
+Cell[26140, 713, 1170, 26, 67, "Input",ExpressionUUID->"66042ba2-fc7a-47bb-a7f9-4c6dca55a259"],
+Cell[27313, 741, 507, 13, 43, "Input",ExpressionUUID->"df810fc5-9c79-457c-b725-86492318538f"],
+Cell[27823, 756, 929, 28, 73, "Input",ExpressionUUID->"8a06704a-0d45-449a-b1b3-e4b57a236890"],
+Cell[CellGroupData[{
+Cell[28777, 788, 294, 8, 43, "Input",ExpressionUUID->"f00c9033-a81c-4c2d-99dc-3c5adee31139"],
+Cell[29074, 798, 19268, 343, 560, "Output",ExpressionUUID->"b54bbac4-e953-403a-b22c-ade0969ad6f6"]
+}, Open  ]]
+}
+]
+*)
+
